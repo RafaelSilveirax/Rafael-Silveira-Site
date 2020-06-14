@@ -1,0 +1,97 @@
+/*soft resete do css*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url(/imagens/gray-top-gradient-background.jpg);
+    background-size:auto 100vh ;
+    font-family: 'Source Code Pro', monospace;
+    height: 100vh;
+    font-size: 12px;
+}
+/*se a tela tiver pelo menos 400px vair carregar estes estilos */
+@media (min-width: 400px) {
+    body{
+        font-size: 14px;
+    }
+}
+
+/*breakpoint */
+@media (min-width: 600px) {
+    body{
+        font-size: 18px;
+    }
+}
+
+/*breakpoint */
+@media (min-width: 1200px) {
+    body{
+        font-size: 20px;
+    }
+}
+
+
+header{
+    /*isso para colocar o titulo e sub no centro*/
+    height: 100vh;/*colocou altura de uma tela para so o titulo e sun*/
+    display: flex;/*colocou ele flex*/
+    justify-content: center;/*colocou ele no centro horizontamente*/
+    align-items: center;/*colocou ele no centro virticalmente*/
+}
+/*Menu*/
+.menu{
+    background-color: rgb(84, 214, 214);
+    position: fixed; /*deixar o menu fixo*/
+    width: 100vw; /* colocar o menu no largura da tela*/  
+    top: 0;/*colcoar o menu no top, essa propriedade pode usar apena junto ao position*/
+
+}
+.log{
+    display: flex;
+    justify-content: space-between;
+}
+.logo1{
+    width: 200px;
+}
+.menu ul{
+    display: flex;  /*Colocar em coluna*/
+    /*coloca meio espasdo, so funcionando com flex*/
+}
+
+.menu li{
+    list-style: none;/*tirar a bolinha da lista*/
+}
+.menu a{
+    display: block;/*transformando o inline em blocl*/
+    padding: 10px 40px;
+    color: indigo;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+a{
+    color: black;
+    text-decoration: none; /*tira sumbliado*/  
+}
+
+.site-sublitle,
+.site-title{
+    text-align: center;
+    color: indigo;
+    font-family: 'Roboto Mono', monospace;
+}
+.site-title{
+    font-size: 4em; /* 4em siginifica 4 vezes o tamanho*/
+}
+
+.site-sublitle{
+    font-style: italic;
+}
+
+.img-portfolio{
+    height: 180px;/*tamanho das imanges*/
+    width: 180px;
+}
