@@ -11,6 +11,7 @@ body{
     font-family: 'Source Code Pro', monospace;
     height: 100vh;
     font-size: 12px;
+    color: indigo;
 }
 /*se a tela tiver pelo menos 400px vair carregar estes estilos */
 @media (min-width: 400px) {
@@ -43,11 +44,11 @@ header{
 }
 /*Menu*/
 .menu{
-    background-color: rgb(84, 214, 214);
+    background-color: rgb(84, 214, 214, 0.7);
     position: fixed; /*deixar o menu fixo*/
     width: 100vw; /* colocar o menu no largura da tela*/  
     top: 0;/*colcoar o menu no top, essa propriedade pode usar apena junto ao position*/
-
+    z-index: 1;/*SUPER IMPORTANTE AULA, ELE DEIXa o menu com priopridade maxima, nada vai ficar abaixo dele*/ 
 }
 .log{
     display: flex;
@@ -55,6 +56,7 @@ header{
 }
 .logo1{
     width: 200px;
+    margin-left: 50px;
 }
 .menu ul{
     display: flex;  /*Colocar em coluna*/
@@ -70,11 +72,42 @@ header{
     color: indigo;
     margin-left: 20px;
     margin-right: 20px;
+    transition: background-color, color, 1s;
+}
+
+/*inverter as cores com passar o mouse por cima AULA 4 */
+.menu a:hover{
+    background-color: indigo;
+    color:  rgb(84, 214, 214);
+}
+
+/*O active serve para celular, quando a pessoa precionar*/
+.menu a:active{
+    background-color: indigo;
+    color:  rgb(84, 214, 214); 
 }
 
 a{
     color: black;
     text-decoration: none; /*tira sumbliado*/  
+}
+
+.titulo{
+    transform: scale(0.2) translateY(50vh);
+    opacity: 0;
+
+    animation: 1s linear  2s animacaoTitulo forwards;
+}
+
+@keyframes animacaoTitulo{
+     /*  0%{
+        Uma animaçao tem estudo incial 0%
+    } */ 
+    
+    100%{
+        transform: scale(1) translateY(0);
+        opacity: 1;
+    }
 }
 
 .site-sublitle,
@@ -95,12 +128,12 @@ a{
     line-height: 1.8em;
 }
 
-.portfolio{
+.contato, .portfolio{
     padding: 2em;
-    height: 100vh;
+    min-height: 100vh;
 }
 
-.portfolio h2{
+.contato h2, .portfolio h2{
     font-family: 'Noto Serif', serif;
     margin-bottom: 1.5em;
     font-size: 2em;
@@ -110,6 +143,7 @@ a{
     display: grid;
     gap: 2em;
 }
+
 @media(min-width: 560px){
     .portfolio .grid{
         grid-template-columns: 240px 240px;
@@ -138,6 +172,10 @@ a{
     object-fit: cover;
     object-position: left bottom;
     border-radius: 10px;
+    transition: transform, 500ms;
+}
+.img-portfolio:hover{
+    transform: scale(1.2);
 }
 
 @media(min-width: 1200px){
@@ -145,4 +183,22 @@ a{
         height: 10em;
         width: 100%;
     }
+}
+
+.contato .icons{
+    text-align: center;
+}
+
+.contato a{
+    color: black;
+    font-size: 4em;
+    transition: text-shadow 0.5s;
+}
+
+.contato a:active, .contato a:hover{
+    text-shadow: 0px 0px 10px rgb(0, 0, 0, 1);
+}
+
+.contato{
+    min-height: 30vh;
 }

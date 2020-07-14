@@ -6,33 +6,34 @@
     <link rel="stylesheet" href="css/estilo.css">
     <title>Rafael Silvera</title>
     <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&family=Noto+Serif:wght@400;700&family=Source+Code+Pro:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a8c410d31c.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
         <nav class="menu">
          <div class="log">
-             <a href="#"><img src="imagens/logo1.png" alt="logo" class="logo1"></a>
+             <img src="imagens/logo1.png" alt="Logo" class="logo1" >
                 <ul>
-                    <li><a href="#">Sobre</a></li>
-                    <li><a href="#">Portfólio</a></li>
-                    <li><a href="#">Contato </a></li>
+                    <li><a href="#" >Sobre</a></li>
+                    <li><a href="#portfolio" >Portfólio</a></li>
+                    <li><a href="#contato" >Contato </a></li>
                 </ul>
         </div>
         </nav>
-        <div>
+        <div class="titulo">
             <h1 class="site-title">RAFAEL SILVEIRA</h1>
             <h2 class="site-sublitle">Web Developer Student</h2>
             <h2 class="site-sublitle">Ciência da Computação</h2>
         </div>
     </header>
     
-    <section class="portfolio">
+    <section class="portfolio" id="portfolio">
         <h2>Portfólio</h2>
         
         <div class="grid">
             <figure>
                 <img class="img-portfolio" src="imagens/ecommerce-creditos-s-o-c-i-a-l-c-u-t-unsplash.jpg" alt="eCommerce">
-                <figcaption>eCommerce</figcaption>
+                <figcaption>Tela Inicial Spotify - BootStrap</figcaption>
             </figure>
             <figure>
                 <img class="img-portfolio" src="imagens/mobile-creditos-nate-grant-unsplash.jpg" alt=">Mobile">
@@ -40,7 +41,7 @@
             </figure>
             <figure>
                 <img class="img-portfolio" src="imagens/webdesign-creditos-domenico-loia-unsplash.jpg" alt="Web design">
-                <figcaption>Web design</figcaption>
+                <figcaption>Jogo de Estourar Balões - JavaScript</figcaption>
             </figure>
             <figure>
                 <img class="img-portfolio" src="imagens/projpessoais-creditos-hal-gatewood-unsplash.jpg" alt="Projetos pessoais">
@@ -51,8 +52,27 @@
                 <figcaption>Projetos pessoais</figcaption>
         </figure>
         </div>
-		
-	</section>
+    </section>
+
+    <section class="contato" id="contato">
+        <h2>Contato</h2>
+      
+        <div class="grid icons">
+            <a target="_blank" href="https://github.com/RafaelSilveirax">
+                <i class="fab fa-github"></i>
+             </a>
+            <a target="_blank" href="https://twitter.com/">
+                <i class="fab fa-twitter"></i>  
+             </a>
+            <a target="_blank" href="https://www.linkedin.com/in/rafael-silveira">
+                <i class="fab fa-linkedin"></i>
+             </a>
+            <a href="mailto:rafaelsilveira2011@live.com">
+                <i class="fas fa-envelope-square"></i>
+             </a>
+        </div>
+        
+    </section>
     
 </body>
 </html>
