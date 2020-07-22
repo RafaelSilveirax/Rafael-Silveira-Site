@@ -7,6 +7,7 @@
 
 body{
     background-image: url("../imagens/gray-top-gradient-background.png");
+    background-attachment: fixed;
     background-size:auto 100vh ;
     font-family: 'Source Code Pro', monospace;
     height: 100vh;
@@ -77,13 +78,13 @@ header{
 
 /*inverter as cores com passar o mouse por cima AULA 4 */
 .menu a:hover{
-    background-color: indigo;
+    background-color: rgb(153,50,204,0.7);
     color:  rgb(84, 214, 214);
 }
 
 /*O active serve para celular, quando a pessoa precionar*/
 .menu a:active{
-    background-color: indigo;
+    background-color: rgb(153,50,204,0.7);
     color:  rgb(84, 214, 214); 
 }
 
@@ -128,16 +129,66 @@ a{
     line-height: 1.8em;
 }
 
-.contato, .portfolio{
+.sobre,
+.contato, 
+.portfolio{
     padding: 2em;
     min-height: 100vh;
 }
 
-.contato h2, .portfolio h2{
+/*muito importante colocar uma altura maxima para esticar, fazendo a tela nao ficar esticadona */
+@media(min-width: 1200px){
+    .container{
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.sobre h2,
+.contato h2, 
+.portfolio h2{
     font-family: 'Noto Serif', serif;
     margin-bottom: 1.5em;
     font-size: 2em;
     text-align: center;
+}
+
+.sobre p{
+    color: indigo;
+    margin-bottom: 1.4em;
+    text-indent: 1.4em;
+    text-align: justify;
+}
+
+.sobre a{
+    color: black;
+    text-decoration: underline;
+}
+.sobre a:hover{
+    text-decoration: none;
+    background-color: blueviolet;
+}
+
+.sobre .avatar{
+    float: left;
+    margin-right: 2em;
+}
+
+.sobre .avatar img{
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+    
+    
+}
+
+@media(max-width: 440px){ /*serve para quando o tamanho de tele for maior que 560px fazer 2 colunas, assim nas outra*/
+    .sobre .avatar img{      
+        clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+        max-width: 300px;
+        padding-bottom: 10px;
+        text-align: center;
+        
+  }
 }
 .portfolio .grid{
     display: grid;
@@ -168,14 +219,14 @@ a{
 
 .img-portfolio{
     height: 180px;/*tamanho das imanges*/
-    width: 240px;
+    width: 100%;
     object-fit: cover;
     object-position: left bottom;
     border-radius: 10px;
     transition: transform, 500ms;
 }
 .img-portfolio:hover{
-    transform: scale(1.2);
+    transform: scale(1.2) rotate(2deg);
 }
 
 @media(min-width: 1200px){
