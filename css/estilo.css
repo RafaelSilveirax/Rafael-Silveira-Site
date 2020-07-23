@@ -45,11 +45,12 @@ header{
 }
 /*Menu*/
 .menu{
-    background-color: rgb(84, 214, 214, 0.7);
+    background-color: rgb(84, 214, 214, 0.6);
     position: fixed; /*deixar o menu fixo*/
     width: 100vw; /* colocar o menu no largura da tela*/  
     top: 0;/*colcoar o menu no top, essa propriedade pode usar apena junto ao position*/
     z-index: 1;/*SUPER IMPORTANTE AULA, ELE DEIXa o menu com priopridade maxima, nada vai ficar abaixo dele*/ 
+    padding: 15px 0px;
 }
 .log{
     display: flex;
@@ -74,6 +75,7 @@ header{
     margin-left: 20px;
     margin-right: 20px;
     transition: background-color, color, 1s;
+    border-radius: 10px;
 }
 
 /*inverter as cores com passar o mouse por cima AULA 4 */
@@ -97,7 +99,7 @@ a{
     transform: scale(0.2) translateY(50vh);
     opacity: 0;
 
-    animation: 1s linear  2s animacaoTitulo forwards;
+    animation: /*1s aqui da delay de 1 segundo*/ linear  2s animacaoTitulo forwards;
 }
 
 @keyframes animacaoTitulo{
@@ -159,6 +161,7 @@ a{
     margin-bottom: 1.4em;
     text-indent: 1.4em;
     text-align: justify;
+    
 }
 
 .sobre a{
@@ -220,8 +223,8 @@ a{
 .img-portfolio{
     height: 180px;/*tamanho das imanges*/
     width: 100%;
-    object-fit: cover;
-    object-position: left bottom;
+    /*object-fit: cover;*/
+    object-position: center;
     border-radius: 10px;
     transition: transform, 500ms;
 }
