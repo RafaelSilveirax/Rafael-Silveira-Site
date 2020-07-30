@@ -188,8 +188,9 @@ a{
     .sobre .avatar img{      
         clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
         max-width: 300px;
-        padding-bottom: 10px;
-        text-align: center;
+        padding-bottom: 20px;
+        align-content: center;
+        
         
   }
 }
@@ -255,4 +256,58 @@ a{
 
 .contato{
     min-height: 30vh;
+}
+
+/*Menu responsive*/
+
+label[for="btn_menu"]{
+    padding: 5px;
+    background-color: #222;
+    color: #fff;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    text-align: center;
+    font-size: 30px;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;  
+    position: fixed;
+    z-index: 2;
+    display: none;   
+    top: 0;
+    left: 0;
+}
+#btn_menu{
+    display: none;
+}
+
+@media only screen and (max-width: 800px){
+    label[for="btn_menu"]{
+        display:block;
+    }
+    .menu{
+        transition: all .5s;
+        margin-left: -2000px;
+            
+     }
+
+    .menu img{
+        display: none;
+    }
+    .menu ul{
+        flex-direction: column;
+        align-items: center;
+        width: 100%; 
+     }
+
+     .menu li{
+         width: 100%;
+         text-align: center;
+         padding: 5px;
+
+     }
+     
+   #btn_menu:checked ~ .menu{
+    margin-left: 0;
+   }
+
 }
