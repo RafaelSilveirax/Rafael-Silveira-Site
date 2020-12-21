@@ -71,7 +71,7 @@ header{
 .menu a{
     display: block;/*transformando o inline em blocl*/
     padding: 10px 40px;
-    color: black
+    color: black;
     margin-left: 20px;
     margin-right: 20px;
     transition: background-color, color, 1s;
