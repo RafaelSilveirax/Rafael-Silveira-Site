@@ -74,6 +74,7 @@ header{
     color: black;
     margin-left: 20px;
     margin-right: 20px;
+    margin-top: 10px;
     transition: background-color, color, 1s;
     border-radius: 10px;
 }
@@ -116,12 +117,9 @@ a{
 .site-sublitle,
 .site-title{
     text-align: center;
-    
-    
 }
 .site-title{
-    font-family: 'Kalam', cursive;
-    font-size: 4em; /* 4em siginifica 4 vezes o tamanho*/
+    margin: -100px;
    
 }
 
@@ -129,6 +127,10 @@ a{
     font-style: italic;
     font-family: 'Noto Serif', serif;
     line-height: 1.8em;
+}
+#imghcj{
+    width: 100%;
+    margin-bo;
 }
 
 .sobre,
