@@ -193,20 +193,32 @@ a{
 
 .sobre .avatar img{
     clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
-    
-    
 }
 
-@media(max-width: 440px){ /*serve para quando o tamanho de tele for maior que 560px fazer 2 colunas, assim nas outra*/
-    .sobre .avatar img{      
-        clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
-        max-width: 300px;
-        padding-bottom: 20px;
-        align-content: center;
-        
-        
-  }
+@media(max-width: 540px){ /*serve para quando o tamanho de tele for maior que 560px fazer 2 colunas, assim nas outra*/     
+   
+    .avatar{
+          padding-left: 30px;
+      }
+    .sobre .avatar img {      
+            width:250px;
+    }
 }
+
+  @media(max-width: 700px){
+  .sobre .avatar{
+    text-align: center;
+    float: none; 
+    margin-bottom: 30px;
+  }
+
+  html, body{
+    overflow-x: hidden;
+}
+}
+
+
+ 
 .portfolio .grid{
     display: grid;
     gap: 2em;
