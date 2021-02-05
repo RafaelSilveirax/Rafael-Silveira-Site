@@ -228,6 +228,7 @@ a{
     .portfolio .grid{
         grid-template-columns: 240px 240px;
     }
+    
 }
 
 @media(min-width: 880px){
@@ -247,7 +248,7 @@ a{
 
 
 .img-portfolio{
-    height: 180px;/*tamanho das imanges*/
+    /*tamanho das imanges*/
     width: 100%;
     /*object-fit: cover;*/
     object-position: center;
@@ -264,6 +265,18 @@ a{
         width: 100%;
     }
 }
+
+@media(max-width: 560px){
+    .img-portfolio{
+        height: 70%;
+        width: 100%;
+    }
+}
+
+
+
+
+
 
 .contato .icons{
     text-align: center;
